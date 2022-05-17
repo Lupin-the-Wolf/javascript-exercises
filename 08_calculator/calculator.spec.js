@@ -1,5 +1,54 @@
 const calculator = require('./calculator');
 
+const add = function(a,b) {
+	let answer = a += b;
+  return answer;
+};
+
+const subtract = function(a,b) {
+  let answer = a -= b;
+  return answer;
+};
+
+const sum = function(a) {
+  let initialValue = 0;
+  for (let i = 0; i < a.length; i++){
+  initialValue += a[i];
+  } return initialValue;
+}
+
+const multiply = function(a,b) {
+  let answer = a *= b;
+  return answer;
+
+};
+
+const power = function(a,n) {
+  let answer = Math.pow(a,n);
+	return (answer);
+};
+
+const factorial = function(a) {
+  if (a === 0 || a === 1){
+    return 1;
+  }
+
+  for(let i = a-1; i >= 1; i--){
+    a *= i;
+  }
+  return a;
+};
+
+// Do not edit below this line
+module.exports = {
+  add,
+  subtract,
+  sum,
+  multiply,
+  power,
+  factorial
+};
+
 describe('add', () => {
 	test('adds 0 and 0', () => {
 		expect(calculator.add(0,0)).toBe(0);
